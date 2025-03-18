@@ -7,11 +7,11 @@ export default function Home() {
 
             <div className="flex gap-8 justify-center mt-4">
                 <a href="../../public/assets/StephenParinas_CV_2025.pdf" download>
-                    <button type="button">Download CV</button>
+                    <button type="button" className="px-4 py-2 border border-black rounded">Download CV</button>
                 </a>
 
                 <a href="#contact">
-                    <button type="button">Contact Me</button>
+                    <button type="button" className="px-4 py-2 border border-black rounded">Contact Me</button>
                 </a>
             </div>
         </div>
