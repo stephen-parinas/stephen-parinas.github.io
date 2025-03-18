@@ -9,12 +9,16 @@ export default function ProjectItem({ title, year, img, stack, githubLink, websi
                     <p className="text-sm">{stack.join(" | ")}</p>
 
                     <div className="flex gap-4 mt-4">
-                        <a href={githubLink}>
-                            <button type="button" className="px-4 py-2 text-sm border border-black rounded">Github</button>
-                        </a>
+                        {githubLink && (
+                            <a href={githubLink} target="_blank">
+                                <button type="button" className="px-4 py-2 text-sm border border-black rounded">
+                                    Github
+                                </button>
+                            </a>
+                        )}
 
                         {websiteLink && (
-                            <a href={websiteLink}>
+                            <a href={websiteLink} target="_blank">
                                 <button type="button" className="px-4 py-2 text-sm border border-black rounded">
                                     Website
                                 </button>

@@ -6,10 +6,10 @@ export const projects = [
         img: "../../public/assets/empty-image.jpg",
         stack: ["React", "Tailwind CSS", "Vite"],
         githubLink: "https://github.com/stephen-parinas/portfolio-website",
-        websiteLink: "https://stephen-parinas-portfolio.netlify.app/",
+        websiteLink: "https://stephen-parinas-portfolio-website.netlify.app/",
     },
     {
-        key: "lasxtfm-to-spotify",
+        key: "lastfm-to-spotify",
         title: "Last.fm to Spotify Playlist",
         year: "2023",
         img: "../../public/assets/lastfm-to-spotify.png",
