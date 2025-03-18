@@ -1,0 +1,38 @@
+export const projects = [
+    {
+        key: "portfolio-website",
+        title: "Portfolio Website",
+        year: "2025",
+        img: "../../public/assets/empty-image.jpg",
+        stack: ["React", "Tailwind CSS", "Vite"],
+        githubLink: "https://github.com/stephen-parinas/portfolio-website",
+        websiteLink: "https://stephen-parinas-portfolio.netlify.app/",
+    },
+    {
+        key: "lasxtfm-to-spotify",
+        title: "Last.fm to Spotify Playlist",
+        year: "2023",
+        img: "../../public/assets/lastfm-to-spotify.png",
+        stack: ["Python", "Flask", "REST APIs"],
+        githubLink: "https://github.com/stephen-parinas/lastfm-to-spotify",
+        websiteLink: null,
+    },
+    {
+        key: "cs235-game-library",
+        title: "Game Library",
+        year: "2023",
+        img: "../../public/assets/game-library.png",
+        stack: ["Python", "Flask"],
+        githubLink: "https://github.com/stephen-parinas/cs235-game-library",
+        websiteLink: null,
+    },
+    {
+        key: "kpop-memory-game",
+        title: "K-pop Memory Game",
+        year: "2023",
+        img: "../../public/assets/kpop-memory-game.png",
+        stack: ["HTML", "CSS", "JavaScript"],
+        githubLink: "https://github.com/stephen-parinas/kpop-memory-game",
+        websiteLink: "https://stephen-parinas-kpop-memory.netlify.app/",
+    },
+]
