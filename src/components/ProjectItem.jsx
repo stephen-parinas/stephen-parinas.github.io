@@ -1,8 +1,10 @@
+import {buttonHover, buttonSm, card, cardHover} from "./common.js";
+
 export default function ProjectItem({ title, year, img, stack, githubLink, websiteLink, description }) {
     return (
-        <div className="p-4 border border-white rounded-md bg-white hover:border-gray-500 hover:bg-gray-200">
+        <div className={card + cardHover}>
             <div className="flex flex-col gap-2">
-                <img src={img} alt={title} className="w-full h-36 object-cover rounded-md"></img>
+                <img src={img} alt={title} className="w-full h-32 object-cover rounded-md"></img>
 
                 <div className="flex flex-col gap-2">
                     <p className="font-semibold">{title}</p>
@@ -11,7 +13,7 @@ export default function ProjectItem({ title, year, img, stack, githubLink, websi
                     <div className="flex gap-4 mt-2">
                         {githubLink && (
                             <a href={githubLink} target="_blank">
-                                <button type="button" className="px-4 py-2 text-sm border border-black rounded">
+                                <button type="button" className={buttonSm + buttonHover}>
                                     Github
                                 </button>
                             </a>
@@ -19,7 +21,7 @@ export default function ProjectItem({ title, year, img, stack, githubLink, websi
 
                         {websiteLink && (
                             <a href={websiteLink} target="_blank">
-                                <button type="button" className="px-4 py-2 text-sm border border-black rounded">
+                                <button type="button" className={buttonSm + buttonHover}>
                                     Website
                                 </button>
                             </a>

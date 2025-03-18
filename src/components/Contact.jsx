@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {buttonHover, buttonMd} from "./common.js";
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -70,7 +71,7 @@ export default function Contact() {
                 ></textarea>
                 {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
 
-                <button type="submit" className="px-4 py-2 border border-black rounded">Send Message</button>
+                <button type="submit" className={buttonMd + buttonHover}>Send Message</button>
             </form>
         </div>
     );

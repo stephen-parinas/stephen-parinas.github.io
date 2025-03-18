@@ -1,3 +1,5 @@
+import {buttonHover, buttonMd} from "./common.js";
+
 export default function Home() {
     return (
         <div className="flex flex-col gap-2 justify-center text-center">
@@ -7,11 +9,11 @@ export default function Home() {
 
             <div className="flex gap-4 justify-center mt-8">
                 <a href="../../public/assets/StephenParinas_CV_2025.pdf" download>
-                    <button type="button" className="px-4 py-2 border border-black rounded">Download CV</button>
+                    <button type="button" className={buttonMd + buttonHover}>Download CV</button>
                 </a>
 
                 <a href="#contact">
-                    <button type="button" className="px-4 py-2 border border-black rounded">Contact Me</button>
+                    <button type="button" className={buttonMd + buttonHover}>Contact Me</button>
                 </a>
             </div>
         </div>

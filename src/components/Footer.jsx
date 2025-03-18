@@ -1,13 +1,16 @@
 import {links} from "../data/links.js";
+import {buttonHover, buttonSm} from "./common.js";
 
 export default function Footer() {
     return (
-        <div className="flex flex-col gap-4 w-full p-8 justify-center items-center bg-gray-300">
-            <div className="flex gap-3">
+        <div className="flex flex-col gap-2 w-full p-8 justify-center items-center bg-gray-300">
+            <div className="flex gap-2">
                 {
                     links.map(link => (
                         <a href={link.link} target="_blank">
-                            <img src={link.img} alt={link.key} width="30" className="opacity-50"></img>
+                            <button className={"p-1 border border-gray-300 rounded " + buttonHover}>
+                                <img src={link.img} alt={link.key} width="25" className="opacity-50"></img>
+                            </button>
                         </a>
                     ))
                 }
