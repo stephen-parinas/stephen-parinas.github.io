@@ -1,5 +1,5 @@
 import {links} from "../data/links.js";
-import {buttonHover, buttonSm} from "./common.js";
+import {buttonHover, button} from "./common.js";
 
 export default function Footer() {
     return (

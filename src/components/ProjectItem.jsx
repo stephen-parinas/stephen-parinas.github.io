@@ -1,4 +1,4 @@
-import {buttonHover, buttonSm, card, cardHover} from "./common.js";
+import {buttonHover, button, card, cardHover} from "./common.js";
 
 export default function ProjectItem({ title, year, img, stack, githubLink, websiteLink, description }) {
     return (
@@ -13,7 +13,7 @@ export default function ProjectItem({ title, year, img, stack, githubLink, websi
                     <div className="flex gap-4 mt-2">
                         {githubLink && (
                             <a href={githubLink} target="_blank">
-                                <button type="button" className={buttonSm + buttonHover}>
+                                <button type="button" className={button + buttonHover}>
                                     Github
                                 </button>
                             </a>
@@ -21,7 +21,7 @@ export default function ProjectItem({ title, year, img, stack, githubLink, websi
 
                         {websiteLink && (
                             <a href={websiteLink} target="_blank">
-                                <button type="button" className={buttonSm + buttonHover}>
+                                <button type="button" className={button + buttonHover}>
                                     Website
                                 </button>
                             </a>
