@@ -36,7 +36,7 @@ export default function Contact() {
     };
 
     return (
-        <div className="flex flex-col gap-2 items-center">
+        <div className="flex flex-col gap-4 items-center">
             <h2 className="text-xl font-semibold">Contact Me</h2>
 
             <form onSubmit={handleSubmit} className="space-y-4 max-w-[700px]">
