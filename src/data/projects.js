@@ -41,4 +41,4 @@ export const projects = [
         githubLink: "https://github.com/stephen-parinas/kpop-memory-game",
         websiteLink: "https://stephen-parinas-kpop-memory.netlify.app/",
     },
-]
+];

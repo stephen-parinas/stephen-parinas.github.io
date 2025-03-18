@@ -36,9 +36,9 @@ export default function AboutMe() {
                 </div>
             </div>
 
-            <div className="flex flex-col gap-2 max-w-[750px] text-left">
+            <div className="flex flex-col gap-2 max-w-[750px] text-justify">
                 <p className="text-sm">
-                    I am currently working as a Software Engineer at Tidy International,
+                    I am currently working as a Graduate Software Engineer at Tidy International,
                     where I develop cloud-based management software using Angular/TS and ASP.Net Core/C#.
                 </p>
 
