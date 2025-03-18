@@ -1,4 +1,4 @@
-export default function ProjectItem({ title, year, img, stack, githubLink, websiteLink }) {
+export default function ProjectItem({ title, year, img, stack, githubLink, websiteLink, description }) {
     return (
         <div className="p-4 border border-black rounded-md">
             <div className="flex flex-col gap-2">
@@ -23,6 +23,10 @@ export default function ProjectItem({ title, year, img, stack, githubLink, websi
                                     Website
                                 </button>
                             </a>
+                        )}
+
+                        {description && (
+                            <p className="text-xs italic inline">{description}</p>
                         )}
                     </div>
                 </div>

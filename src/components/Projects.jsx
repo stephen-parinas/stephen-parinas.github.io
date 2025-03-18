@@ -17,6 +17,7 @@ export default function Projects() {
                             stack={project.stack}
                             githubLink={project.githubLink}
                             websiteLink={project.websiteLink}
+                            description={project.description}
                         />
                     ))
                 }
