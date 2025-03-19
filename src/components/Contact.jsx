@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {buttonHover, button} from "./common.js";
+import {buttonHover, button, formField} from "./common.js";
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -55,13 +55,13 @@ export default function Contact() {
         <div className="flex flex-col gap-4 items-center">
             <h2 className="text-xl font-semibold">Contact Me</h2>
 
-            <form onSubmit={handleSubmit} className="space-y-4 max-w-[700px]">
+            <form onSubmit={handleSubmit} className="space-y-4 max-w-[600px]">
                 <input
                     type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border rounded"
+                    className={formField}
                     placeholder="Name"
                 />
                 {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
@@ -71,7 +71,7 @@ export default function Contact() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 border rounded"
+                    className={formField}
                     placeholder="Email"
                 />
                 {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
@@ -81,7 +81,7 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     rows="8"
-                    className="w-full px-4 py-2 border rounded resize-none"
+                    className={formField + "resize-none"}
                     placeholder="Message"
                 ></textarea>
                 {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}

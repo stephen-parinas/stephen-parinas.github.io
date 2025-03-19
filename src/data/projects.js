@@ -3,7 +3,7 @@ export const projects = [
         key: "portfolio-website",
         title: "Portfolio Website",
         year: "2025",
-        img: "assets/empty-image.jpg",
+        img: "assets/portfolio-website.png",
         stack: ["React", "JavaScript", "Tailwind CSS", "Vite"],
         githubLink: "https://github.com/stephen-parinas/portfolio-website",
         websiteLink: "https://stephen-parinas-portfolio-website.netlify.app/",

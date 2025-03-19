@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import getTrackData from "../../spotify/spotify.js";
+import {textDescription, textOverflow} from "./common.js";
 
 export default function SpotifyWidget() {
     const [loading, setLoading] = useState(true);
@@ -22,9 +23,9 @@ export default function SpotifyWidget() {
     }, []);
 
     return (
-        <div className="flex gap-4 w-full items-center">
-            <a href={result?.trackUrl} target="_blank">
-                <img src={result?.albumImageUrl ?? "assets/no-album-art.png"} alt="spotify" className="h-14 rounded-md"></img>
+        <div className="grid grid-cols-[56px_1fr] gap-4 w-full items-center">
+            <a href={result?.trackUrl} target="_blank" className="inline-block">
+                <img src={result?.albumImageUrl ?? "assets/no-album-art.png"} alt="spotify" className="rounded-md"></img>
             </a>
 
             {loading && (
@@ -36,19 +37,20 @@ export default function SpotifyWidget() {
             )}
 
             {!loading && result && (
-                <div className="text-left">
-                    <p className="text-xs font-semibold">{result.title ?? "Track Name"}</p>
-                    <p className="text-xs">{result.artist ?? "Artist"}</p>
+                <div className="text-left overflow-hidden whitespace-nowrap">
+                    <p className={textOverflow + "font-semibold"} title={result.title ?? "Track Name"}>{result.title ?? "Track Name"}</p>
+                    <p className={textOverflow} title={result.artist ?? "Artist"}>{result.artist ?? "Artist"}</p>
 
                     {!result.playedAt && (
-                        <p className="text-xs italic text-gray-500 mt-1">Now playing</p>
+                        <p className={textDescription}>Now playing</p>
                     )}
 
                     {result.playedAt && (
-                        <p className="text-xs italic text-gray-500 mt-1">{result.playedAt}</p>
+                        <p className={textDescription}>{result.playedAt}</p>
                     )}
                 </div>
             )}
         </div>
     )
 }
+
