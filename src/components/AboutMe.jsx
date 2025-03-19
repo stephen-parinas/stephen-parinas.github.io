@@ -1,4 +1,5 @@
 import {card, cardHover} from "./common.js";
+import SpotifyWidget from "./SpotifyWidget.jsx";
 
 export default function AboutMe() {
     return (
@@ -35,6 +36,8 @@ export default function AboutMe() {
                          alt="spotify"
                          width="25"
                     ></img>
+                    <p className="font-semibold my-2">Spotify Activity</p>
+                    <SpotifyWidget />
                 </div>
             </div>
 
