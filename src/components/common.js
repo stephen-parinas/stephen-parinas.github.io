@@ -5,6 +5,6 @@ export const button = "px-4 py-2 text-sm border border-gray-500 rounded ";
 export const buttonHover = "hover:border-white hover:bg-white hover:text-black transition duration-300 ease-in-out ";
 
 export const textOverflow = "text-xs overflow-hidden text-ellipsis ";
-export const textDescription = "text-xs italic text-gray-500 mt-1";
+export const textDescription = "text-xs italic text-gray-500 mt-1 ";
 
-export const formField = "w-full px-4 py-2 text-sm border rounded";
+export const formInput = "w-full px-4 py-2 text-sm border rounded-md focus:outline-gray-500 ";

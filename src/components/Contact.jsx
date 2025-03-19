@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {buttonHover, button, formField} from "./common.js";
+import {buttonHover, button, formInput} from "./common.js";
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -61,7 +61,7 @@ export default function Contact() {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className={formField}
+                    className={formInput}
                     placeholder="Name"
                 />
                 {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
@@ -71,7 +71,7 @@ export default function Contact() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className={formField}
+                    className={formInput}
                     placeholder="Email"
                 />
                 {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
@@ -81,7 +81,7 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     rows="8"
-                    className={formField + "resize-none"}
+                    className={formInput + "resize-none"}
                     placeholder="Message"
                 ></textarea>
                 {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
