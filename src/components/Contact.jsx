@@ -25,14 +25,29 @@ export default function Contact() {
         return newErrors;
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const validationErrors = validateForm();
-        if (!Object.keys(validationErrors).length) {
-            alert("Form submitted! ✅");
-            setFormData({ name: "", email: "", message: "" });
-        } else {
+
+        if (Object.keys(validationErrors).length) {
             setErrors(validationErrors);
+            return;
+        }
+
+        try {
+            const response = await fetch("https://formspree.io/f/xdkeakkl", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setFormData({ name: "", email: "", message: "" });
+            } else {
+                alert("Failed to send message. Please try again.");
+            }
+        } catch (error) {
+            alert("Error: " + error.message);
         }
     };
 
