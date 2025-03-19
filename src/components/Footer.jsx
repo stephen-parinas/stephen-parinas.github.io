@@ -7,7 +7,7 @@ export default function Footer() {
             <div className="flex gap-2">
                 {
                     links.map(link => (
-                        <a href={link.link} target="_blank">
+                        <a href={link.link} key={link.key} target="_blank">
                             <button className={"p-1 border border-gray-300 rounded " + buttonHover}>
                                 <img src={link.img} alt={link.key} width="25" className="opacity-50"></img>
                             </button>

@@ -4,7 +4,7 @@ export const projects = [
         title: "Portfolio Website",
         year: "2025",
         img: "assets/empty-image.jpg",
-        stack: ["React", "Tailwind CSS", "Vite"],
+        stack: ["React", "JavaScript", "Tailwind CSS", "Vite"],
         githubLink: "https://github.com/stephen-parinas/portfolio-website",
         websiteLink: "https://stephen-parinas-portfolio-website.netlify.app/",
     },
