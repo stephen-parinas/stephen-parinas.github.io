@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {buttonHover, button, formInput, textSectionHeader} from "./common.js";
+import {buttonHover, button, formInput, textSectionHeader, textError} from "./common.js";
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -21,7 +21,7 @@ export default function Contact() {
         if (!formData.email.trim()) newErrors.email = "Email is required.";
         else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = "Invalid email format.";
 
-        if (!formData.message.trim()) newErrors.message = "Message is required/";
+        if (!formData.message.trim()) newErrors.message = "Message is required.";
         return newErrors;
     };
 
@@ -64,7 +64,7 @@ export default function Contact() {
                     className={formInput}
                     placeholder="Name"
                 />
-                {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
+                {errors.name && <p className={textError}>{errors.name}</p>}
 
                 <input
                     type="email"
@@ -74,7 +74,7 @@ export default function Contact() {
                     className={formInput}
                     placeholder="Email"
                 />
-                {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+                {errors.email && <p className={textError}>{errors.email}</p>}
 
                 <textarea
                     name="message"
@@ -84,7 +84,7 @@ export default function Contact() {
                     className={formInput + "resize-none"}
                     placeholder="Message"
                 ></textarea>
-                {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
+                {errors.message && <p className={textError}>{errors.message}</p>}
 
                 <button type="submit" className={button + buttonHover}>Send Message</button>
             </form>
