@@ -9,14 +9,14 @@ export default function Footer() {
                     links.map(link => (
                         <a href={link.link} key={link.key} target="_blank">
                             <button className={"p-1 border border-gray-300 rounded " + buttonHover}>
-                                <img src={link.img} alt={link.key} width="25" className="opacity-50"></img>
+                                <img src={link.img} alt={link.key} width="30" className="opacity-50"></img>
                             </button>
                         </a>
                     ))
                 }
             </div>
 
-            <p className="text-xs text-gray-500">© { new Date().getFullYear() } Stephen Parinas. All rights reserved.</p>
+            <p className="text-sm text-gray-500">© { new Date().getFullYear() } Stephen Parinas. All rights reserved.</p>
         </div>
     );
 }

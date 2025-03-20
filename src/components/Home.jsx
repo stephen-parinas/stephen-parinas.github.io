@@ -3,9 +3,11 @@ import {buttonHover, button} from "./common.js";
 export default function Home() {
     return (
         <div className="flex flex-col gap-2 justify-center text-center">
-            <p className="text-sm text-gray-500">Hello, I'm</p>
-            <h1 className="text-4xl font-bold">Stephen Parinas</h1>
-            <p className="text-sm text-gray-500">Software Engineer at Tidy International</p>
+            <div>
+                <p className="text-gray-500">Hello, I'm</p>
+                <h1 className="text-[36px] font-bold">Stephen Parinas</h1>
+                <p className="text-gray-500">Software Engineer at Tidy International</p>
+            </div>
 
             <div className="flex gap-4 justify-center mt-8">
                 <a href="../../public/assets/StephenParinas_CV_2025.pdf" download>

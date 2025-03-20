@@ -1,4 +1,4 @@
-import {buttonHover, button, card, cardHover, textDescription} from "./common.js";
+import {buttonHover, button, card, cardHover, textDescription2, textTitle, textDescription1} from "./common.js";
 
 export default function ProjectItem({ title, year, img, stack, githubLink, websiteLink, description }) {
     return (
@@ -7,8 +7,8 @@ export default function ProjectItem({ title, year, img, stack, githubLink, websi
                 <img src={img} alt={title} className="w-full h-40 object-cover rounded-md"></img>
 
                 <div className="flex flex-col gap-2">
-                    <p className="font-semibold">{title}</p>
-                    <p className="text-xs">{stack.join(" | ")}</p>
+                    <p className={textTitle}>{title}</p>
+                    <p className={textDescription1}>{stack.join(" | ")}</p>
 
                     <div className="flex gap-4 mt-2">
                         {githubLink && (
@@ -28,7 +28,7 @@ export default function ProjectItem({ title, year, img, stack, githubLink, websi
                         )}
 
                         {description && (
-                            <p className={textDescription + "mt-0"}>{description}</p>
+                            <p className={textDescription2 + "mt-0"}>{description}</p>
                         )}
                     </div>
                 </div>

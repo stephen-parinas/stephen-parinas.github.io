@@ -1,12 +1,12 @@
-import {card, cardHover, textDescription} from "./common.js";
+import {card, cardHover, textDescription1, textDescription2, textSectionHeader, textTitle} from "./common.js";
 import SpotifyWidget from "./SpotifyWidget.jsx";
 
 export default function AboutMe() {
     return (
         <div className="flex flex-col gap-4 items-center text-center">
-            <h2 className="text-xl font-semibold">About Me</h2>
+            <h2 className={textSectionHeader}>About Me</h2>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 w-[100%] max-w-[750px]">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-[100%] max-w-[900px]">
                 <div className={aboutCard}>
                     <img
                         src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_laptop_mac_48px-512.png"
@@ -14,9 +14,9 @@ export default function AboutMe() {
                         width="25"
                     ></img>
 
-                    <p className="font-semibold my-2">Current Role</p>
-                    <p className="text-xs">Graduate Software Engineer</p>
-                    <p className={textDescription}>Tidy International</p>
+                    <p className={textTitle + "my-2"}>Current Role</p>
+                    <p className={textDescription1}>Graduate Software Engineer</p>
+                    <p className={textDescription2}>Tidy International</p>
                 </div>
 
                 <div className={aboutCard}>
@@ -25,23 +25,23 @@ export default function AboutMe() {
                          width="25"
                     ></img>
 
-                    <p className="font-semibold my-2">Education</p>
-                    <p className="text-xs">BE(Hons) in Biomedical Engineering</p>
-                    <p className="text-xs">BSc in Pharmacology</p>
-                    <p className={textDescription}>The University of Auckland</p>
+                    <p className={textTitle + "my-2"}>Education</p>
+                    <p className={textDescription1}>BE(Hons) in Biomedical Engineering</p>
+                    <p className={textDescription1}>BSc in Pharmacology</p>
+                    <p className={textDescription2}>The University of Auckland</p>
                 </div>
 
-                <div className={aboutCard + "col-span-2 sm:col-span-1"}>
+                <div className={aboutCard}>
                     <img src="https://cdn3.iconfinder.com/data/icons/font-awesome-brands/512/spotify-512.png"
                          alt="spotify"
                          width="25"
                     ></img>
-                    <p className="font-semibold my-2">Spotify Activity</p>
+                    <p className={textTitle + "my-2"}>Spotify Activity</p>
                     <SpotifyWidget />
                 </div>
             </div>
 
-            <div className="flex flex-col gap-2 max-w-[750px] text-justify">
+            <div className="flex flex-col gap-2 max-w-[900px] text-justify">
                 <p className="text-sm">
                     I am currently working full-time as a Software Engineer at Tidy International,
                     developing cloud-based management software using Angular/TS and ASP.Net Core/C#.

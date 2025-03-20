@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import getTrackData from "../../spotify/spotify.js";
-import {textDescription, textOverflow} from "./common.js";
+import {textDescription1, textDescription2, textOverflow} from "./common.js";
 
 export default function SpotifyWidget() {
     const [loading, setLoading] = useState(true);
@@ -29,11 +29,11 @@ export default function SpotifyWidget() {
             </a>
 
             {loading && (
-                <p className="text-xs text-left">Loading...</p>
+                <p className={textDescription1 + "text-left"}>Loading...</p>
             )}
 
             {!loading && !result && (
-                <p className="text-xs text-left">Could not get activity.</p>
+                <p className={textDescription1 + "text-left"}>Could not get activity.</p>
             )}
 
             {!loading && result && (
@@ -42,11 +42,11 @@ export default function SpotifyWidget() {
                     <p className={textOverflow} title={result.artist ?? "Artist"}>{result.artist ?? "Artist"}</p>
 
                     {!result.playedAt && (
-                        <p className={textDescription}>Now playing</p>
+                        <p className={textDescription2}>Now playing</p>
                     )}
 
                     {result.playedAt && (
-                        <p className={textDescription}>{result.playedAt}</p>
+                        <p className={textDescription2}>{result.playedAt}</p>
                     )}
                 </div>
             )}

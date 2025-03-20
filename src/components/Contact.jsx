@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {buttonHover, button, formInput} from "./common.js";
+import {buttonHover, button, formInput, textSectionHeader} from "./common.js";
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -53,7 +53,7 @@ export default function Contact() {
 
     return (
         <div className="flex flex-col gap-4 items-center">
-            <h2 className="text-xl font-semibold">Contact Me</h2>
+            <h2 className={textSectionHeader}>Contact Me</h2>
 
             <form onSubmit={handleSubmit} className="space-y-4 max-w-[600px]">
                 <input
