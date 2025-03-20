@@ -10,7 +10,7 @@ export default function Home() {
             </div>
 
             <div className="flex gap-4 justify-center mt-8">
-                <a href="../../public/assets/StephenParinas_CV_2025.pdf" download>
+                <a href="/assets/StephenParinas_CV_2025.pdf" download>
                     <button type="button" className={button + buttonHover}>Download CV</button>
                 </a>
 
