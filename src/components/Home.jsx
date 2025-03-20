@@ -4,9 +4,9 @@ export default function Home() {
     return (
         <div className="flex flex-col gap-2 justify-center text-center">
             <div>
-                <p className="text-gray-500">Hello, I'm</p>
-                <h1 className="text-[36px] font-bold">Stephen Parinas</h1>
-                <p className="text-gray-500">Software Engineer at Tidy International</p>
+                <p className="text-tertiary-text">Hello, I'm</p>
+                <h1 className="text-[40px] text-primary-text font-bold">Stephen Parinas</h1>
+                <p className="text-tertiary-text">Software Engineer at Tidy International</p>
             </div>
 
             <div className="flex gap-4 justify-center mt-8">

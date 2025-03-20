@@ -6,7 +6,7 @@ import Footer from "./components/Footer.jsx";
 
 export default function App() {
     return (
-        <div className="flex flex-col min-h-screen bg-gray-200 min-w-[360px]">
+        <div className="flex flex-col bg-page min-w-[360px] min-h-screen">
             <div className="flex flex-col gap-12 items-center justify-center py-20 px-8">
                 <section id="home">
                     <Home/>
