@@ -19,10 +19,12 @@ export default function Contact() {
 
     const [errors, setErrors] = useState({});
 
+    // Handle changes in the form fields (name, email, or message)
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
+    // Validates the form data
     const validateForm = () => {
         let newErrors = {};
         if (!formData.name.trim()) newErrors.name = "Name is required.";
@@ -34,16 +36,19 @@ export default function Contact() {
         return newErrors;
     };
 
+    // Handle form submission
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const validationErrors = validateForm();
 
+        // Validate form before submitting
+        const validationErrors = validateForm();
         if (Object.keys(validationErrors).length) {
             setErrors(validationErrors);
             return;
         }
 
         try {
+            // If no validation errors, send the form data to the server
             const response = await fetch("https://formspree.io/f/xdkeakkl", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },

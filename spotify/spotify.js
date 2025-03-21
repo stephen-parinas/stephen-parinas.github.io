@@ -1,5 +1,9 @@
 import {formatDistanceToNow} from "date-fns";
 
+/**
+ * Get the Spotify access token from the refresh token.
+ * @returns {Promise<any|null>}
+ */
 const getAccessToken = async () => {
     const url = "https://accounts.spotify.com/api/token";
 
@@ -27,6 +31,11 @@ const getAccessToken = async () => {
     }
 }
 
+/**
+ * Handle the endpoints for getting the tracks.
+ * @param url
+ * @returns {Promise<Response|null>}
+ */
 const handler = async (url) => {
     try {
         const { access_token } = await getAccessToken();
@@ -48,17 +57,30 @@ const handler = async (url) => {
     }
 }
 
+/**
+ * Get the user's currently played track.
+ * @returns {Promise<Response|null>}
+ */
 const getCurrentTrack = async () => {
     const url = "https://api.spotify.com/v1/me/player/currently-playing";
     return handler(url);
 }
 
+/**
+ * Get the user's last played track.
+ * @returns {Promise<Promise<Response|null>|null>}
+ */
 const getLastPlayedTrack = async () => {
     const url = "https://api.spotify.com/v1/me/player/recently-played?limit=1";
     return handler(url);
 }
 
+/**
+ * Get the data for the user's current or last played track.
+ * @returns {Promise<{artist: *, playedAt: string, trackId: string, albumImageUrl: *, title: *, trackUrl: *}>}
+ */
 export default async function getTrackData() {
+    // Get the user's last played track.
     const lastPlayedResponse = await getLastPlayedTrack();
 
     try {
@@ -67,16 +89,18 @@ export default async function getTrackData() {
         }
 
         let track = await lastPlayedResponse.json();
-
         if (!track.items[0]) {
             throw new Error("Error: Could not get Spotify activity.");
         }
 
+        // Set the track as the item to return
         let item = track.items[0].track;
         let playedAt = formatDistanceToNow(new Date(track.items[0].played_at), { addSuffix: true });
 
+        // Get the user's currently played track.
         const currentResponse = await getCurrentTrack();
 
+        // If user is currently playing a track, set that as the item to return.
         if (currentResponse.status !== 204 && currentResponse.status < 400) {
             track = await currentResponse.json();
 
@@ -86,6 +110,7 @@ export default async function getTrackData() {
             }
         }
 
+        // Set the track information to return.
         const artist = item.artists.map((artist) => artist.name).join(", ");
         const title = item.name;
         const trackId = item.id;
@@ -105,6 +130,10 @@ export default async function getTrackData() {
     }
 }
 
+/**
+ * Handle API errors.
+ * @param response
+ */
 function handleError(response) {
     if (response.status === 401) {
         throw new Error("Unauthorized: Access token expired or invalid");

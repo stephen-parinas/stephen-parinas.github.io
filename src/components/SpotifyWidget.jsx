@@ -12,6 +12,7 @@ export default function SpotifyWidget() {
             setLoading(false);
         });
 
+        // Get the user's current or last played track every 5 seconds.
         const interval = setInterval(() => {
             getTrackData().then((result) => {
                 setResult(result);
