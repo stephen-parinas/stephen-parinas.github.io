@@ -2,7 +2,7 @@ import {buttonHover, button, card, cardHover, textDescription2, textTitle, textD
 
 export default function ProjectItem({ title, year, img, stack, githubLink, websiteLink, description }) {
     return (
-        <div className={card + cardHover + "bg-gradient-to-br from-card/70 to-card/50"}>
+        <div className={card + cardHover + "bg-gradient-to-br from-card/70 to-card/40"}>
             <div className="flex flex-col">
                 <img src={img} alt={title} className="w-full h-40 object-cover rounded-t-md border-b border-b-white/20 backdrop-blur-xl "></img>
 
