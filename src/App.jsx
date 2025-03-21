@@ -8,7 +8,7 @@ export default function App() {
     return (
         <div className="relative flex flex-col bg-page min-w-[360px]">
             <div className="min-h-screen">
-                <div className="absolute inset-0 bg-[url('assets/overlay.png')] opacity-100 z-0"></div>
+                <div className="absolute inset-0 bg-[url('/assets/overlay.png')] opacity-100 z-0"></div>
 
                 <div className="relative flex flex-col gap-12 items-center justify-center py-20 px-8 z-[1]">
                     <section id="home">
