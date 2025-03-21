@@ -1,9 +1,9 @@
-import {card, cardHover, textDescription1, textDescription2, textSectionHeader, textTitle} from "./common.js";
+import {card, cardHover, section, textDescription1, textDescription2, textSectionHeader, textTitle} from "./common.js";
 import SpotifyWidget from "./SpotifyWidget.jsx";
 
 export default function AboutMe() {
     return (
-        <div className="flex flex-col gap-4 items-center text-center">
+        <div className={section + "text-center"}>
             <h2 className={textSectionHeader}>About Me</h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-[100%] max-w-[900px]">

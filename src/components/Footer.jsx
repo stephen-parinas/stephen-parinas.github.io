@@ -7,8 +7,8 @@ export default function Footer() {
             <div className="flex gap-2">
                 {
                     links.map(link => (
-                        <a href={link.link} key={link.key} target="_blank" className="hover:scale-110 hover:shadow-purple-400/40 transition-all duration-300">
-                            <button className={"p-1"}>
+                        <a href={link.link} key={link.key} target="_blank">
+                            <button className="p-1 hover:scale-110 transition-all duration-300">
                                 <img src={link.img} alt={link.key} width="30"></img>
                             </button>
                         </a>
