@@ -6,23 +6,27 @@ import Footer from "./components/Footer.jsx";
 
 export default function App() {
     return (
-        <div className="flex flex-col bg-page min-w-[360px] min-h-screen">
-            <div className="flex flex-col gap-12 items-center justify-center py-20 px-8">
-                <section id="home">
-                    <Home/>
-                </section>
+        <div className="relative flex flex-col bg-page min-w-[360px]">
+            <div className="min-h-screen">
+                <div className="absolute inset-0 bg-[url('assets/overlay.png')] opacity-100 z-0"></div>
 
-                <section id="about">
-                    <AboutMe/>
-                </section>
+                <div className="relative flex flex-col gap-12 items-center justify-center py-20 px-8 z-[1]">
+                    <section id="home">
+                        <Home/>
+                    </section>
 
-                <section id="projects">
-                    <Projects/>
-                </section>
+                    <section id="about">
+                        <AboutMe/>
+                    </section>
 
-                <section id="contact">
-                    <Contact/>
-                </section>
+                    <section id="projects">
+                        <Projects/>
+                    </section>
+
+                    <section id="contact">
+                        <Contact/>
+                    </section>
+                </div>
             </div>
 
             <Footer/>

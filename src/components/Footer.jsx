@@ -3,11 +3,11 @@ import {button} from "./common.js";
 
 export default function Footer() {
     return (
-        <div className="flex flex-col gap-2 w-full p-8 justify-center items-center bg-footer">
+        <div className="flex flex-col gap-2 w-full p-8 justify-center items-center bg-page z-[1]">
             <div className="flex gap-2">
                 {
                     links.map(link => (
-                        <a href={link.link} key={link.key} target="_blank" className="hover:scale-105 hover:shadow-purple-400/40 transition-all duration-300">
+                        <a href={link.link} key={link.key} target="_blank" className="hover:scale-110 hover:shadow-purple-400/40 transition-all duration-300">
                             <button className={"p-1"}>
                                 <img src={link.img} alt={link.key} width="30"></img>
                             </button>

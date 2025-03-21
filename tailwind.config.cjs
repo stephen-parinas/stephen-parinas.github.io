@@ -7,7 +7,7 @@ export default {
     theme: {
         extend: {
             colors: {
-                "page": "#573A90",
+                "page": "#61449A",
                 "page-secondary": "#A68BE3",
                 "page-tertiary": "#3A1C71",
                 "primary-text": "#EAE2FC",
@@ -18,7 +18,6 @@ export default {
                 "button-hover": "#C39DFF",
                 "card": "#C39DFF",
                 "form": "#C7B8F3",
-                "footer": "#4E3086"
             }
         },
     },

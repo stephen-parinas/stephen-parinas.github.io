@@ -52,7 +52,7 @@ export default function Contact() {
     };
 
     return (
-        <div className="flex flex-col gap-4 items-center">
+        <div className="flex flex-1 flex-col gap-4 items-center">
             <h2 className={textSectionHeader}>Contact Me</h2>
 
             <form onSubmit={handleSubmit} className="space-y-4 max-w-[600px]">
