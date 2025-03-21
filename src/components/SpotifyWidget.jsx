@@ -23,7 +23,7 @@ export default function SpotifyWidget() {
     }, []);
 
     return (
-        <div className="grid grid-cols-[60px_1fr] gap-4 w-full">
+        <div className="grid grid-cols-[64px_1fr] gap-4 w-full">
             <a href={result?.trackUrl} target="_blank" className="inline-block">
                 <img src={result?.albumImageUrl ?? "assets/no-album-art.png"} alt="spotify" className="shadow-lg rounded-md"></img>
             </a>

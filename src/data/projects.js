@@ -6,7 +6,7 @@ export const projects = [
         img: "assets/portfolio-website.png",
         stack: ["React", "JavaScript", "Tailwind CSS", "Vite"],
         githubLink: "https://github.com/stephen-parinas/portfolio-website",
-        websiteLink: "https://stephen-parinas-portfolio-website.netlify.app/",
+        websiteLink: "https://stephen-parinas.github.io/",
     },
     {
         key: "sidexis-integration",

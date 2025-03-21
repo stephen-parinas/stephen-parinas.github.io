@@ -15,7 +15,7 @@ export default {
                 "tertiary-text": "#B5A8E6",
                 "button-text": "#D1B3FF",
                 "button": "#C7B8F3",
-                "button-hover": "#C39DFF",
+                "button-hover": "#E1CEFF",
                 "card": "#E1CEFF",
                 "form": "#C7B8F3",
             }
