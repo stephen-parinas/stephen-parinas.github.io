@@ -4,7 +4,7 @@ export default function ProjectItem({ title, year, img, stack, githubLink, websi
     return (
         <div className={card + cardHover + "bg-gradient-to-br from-card/70 to-card/40"}>
             <div className="flex flex-col">
-                <img src={img} alt={title} className="w-full h-40 object-cover rounded-t-md border-b border-b-white/20 backdrop-blur-xl "></img>
+                <img src={img} alt={title} className="w-full h-48 object-cover rounded-t-md border-b border-b-white/20 backdrop-blur-xl "></img>
 
                 <div className="flex flex-col gap-2 p-4">
                     <p className={textTitle}>{title}</p>
