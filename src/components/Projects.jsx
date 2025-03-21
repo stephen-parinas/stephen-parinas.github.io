@@ -27,7 +27,7 @@ export default function Projects() {
     }
 
     const [currentPage, setCurrentPage] = useState(0);
-    const [direction, setDirection] = useState(1);
+    const [direction, setDirection] = useState(0);
     const [pageSize, setPageSize] = useState(getPageSize());
 
     // Update the page size if the window is resized
@@ -62,9 +62,9 @@ export default function Projects() {
                     <motion.div
                         key={currentPage}
                         custom={direction}
-                        initial={{x: direction > 0 ? "100%" : "-100%", opacity: 0}}
+                        initial={{x: (direction * 100) + "%", opacity: 0}}
                         animate={{x: "0%", opacity: 1}}
-                        exit={{x: direction > 0 ? "-100%" : "100%", opacity: 0}}
+                        exit={{x: (direction * -100) + "%", opacity: 0}}
                         transition={{type: "spring", stiffness: 150, damping: 25, duration: 0.7}}
                         className="grid grid-cols-1 sm:grid-cols-2 gap-5"
                     >
