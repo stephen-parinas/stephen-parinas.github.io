@@ -40,15 +40,6 @@ export default function AboutMe() {
                     <SpotifyWidget />
                 </div>
             </div>
-
-            {/*<div className="flex flex-col gap-2 max-w-[900px] text-justify">*/}
-            {/*    <p className="text-sm">*/}
-            {/*        I am currently working full-time as a Software Engineer at Tidy International,*/}
-            {/*        developing cloud-based management software using Angular/TS and ASP.Net Core/C#.*/}
-            {/*        Feel free to check out some of my projects on this page, and reach out if you*/}
-            {/*        have any questions or just want to connect :)*/}
-            {/*    </p>*/}
-            {/*</div>*/}
         </div>
     );
 }

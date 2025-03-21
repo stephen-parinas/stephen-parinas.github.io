@@ -28,7 +28,7 @@ export default function ProjectItem({ title, year, img, stack, githubLink, websi
                         )}
 
                         {description && (
-                            <p className={textDescription1 + "italic"}>{description}</p>
+                            <p className={textDescription2 + "italic"}>{description}</p>
                         )}
                     </div>
                 </div>

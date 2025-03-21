@@ -1,6 +1,6 @@
 export const section = "flex flex-col gap-4 items-center ";
 
-export const card = "flex flex-col p-4 bg-card/20 backdrop-blur-lg border border-white/20 rounded-lg shadow-lg shadow-violet-500/30 ";
+export const card = "flex flex-col p-4 bg-gradient-to-br from-card/90 to-card/60 backdrop-blur-xl border border-white/20 rounded-lg shadow-lg shadow-violet-500/30 ";
 export const cardHover = "hover:scale-105 hover:shadow-purple-400/40 transition-all duration-300 ";
 
 export const button = "px-4 py-2 bg-button font-semibold rounded-lg shadow-md ";
@@ -10,7 +10,7 @@ export const textSectionHeader = "text-2xl text-primary-text font-semibold ";
 export const textTitle = "text-lg font-semibold ";
 export const textOverflow = "text-sm overflow-hidden text-ellipsis ";
 export const textDescription1 = "text-sm ";
-export const textDescription2 = "text-sm italic mt-1 ";
+export const textDescription2 = "text-sm italic mt-1 text-gray-700 ";
 export const textError = "text-red-400 text-sm text-left w-full";
 
 export const formSection = "w-full flex flex-col gap-1";

@@ -16,7 +16,7 @@ export default {
                 "button-text": "#D1B3FF",
                 "button": "#A68BE3",
                 "button-hover": "#C39DFF",
-                "card": "#C39DFF",
+                "card": "#E1CEFF",
                 "form": "#C7B8F3",
             }
         },
