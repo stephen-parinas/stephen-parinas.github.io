@@ -14,7 +14,7 @@ export default {
                 "secondary-text": "#C7B8F3",
                 "tertiary-text": "#B5A8E6",
                 "button-text": "#D1B3FF",
-                "button": "#A68BE3",
+                "button": "#C7B8F3",
                 "button-hover": "#C39DFF",
                 "card": "#E1CEFF",
                 "form": "#C7B8F3",

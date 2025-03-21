@@ -1,4 +1,4 @@
-import {card, cardHover, section, textDescription1, textDescription2, textSectionHeader, textTitle} from "./common.js";
+import {aboutMeCard, aboutMeCardHover, section, textDescription1, textDescription2, textSectionHeader, textTitle} from "./common.js";
 import SpotifyWidget from "./SpotifyWidget.jsx";
 
 export default function AboutMe() {
@@ -44,4 +44,4 @@ export default function AboutMe() {
     );
 }
 
-const aboutCard = card + cardHover + "items-center cursor-default ";
+const aboutCard = aboutMeCard + aboutMeCardHover;

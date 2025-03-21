@@ -1,5 +1,8 @@
 export const section = "flex flex-col gap-4 items-center ";
 
+export const aboutMeCard = "flex flex-col items-center cursor-default p-4 bg-gradient-to-br from-card/90 to-card/60 backdrop-blur-xl border border-white/20 rounded-lg shadow-lg shadow-violet-500/30 ";
+export const aboutMeCardHover = "hover:scale-105 hover:shadow-purple-400/40 transition-all duration-300 "
+
 export const card = "flex flex-col p-4 bg-gradient-to-br from-card/90 to-card/60 backdrop-blur-xl border border-white/20 rounded-lg shadow-lg shadow-violet-500/30 ";
 export const cardHover = "hover:scale-105 hover:shadow-purple-400/40 transition-all duration-300 ";
 
