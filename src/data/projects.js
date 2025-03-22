@@ -39,6 +39,6 @@ export const projects = [
         img: "assets/kpop-memory-game.png",
         stack: ["HTML", "CSS", "JavaScript"],
         githubLink: "https://github.com/stephen-parinas/kpop-memory-game",
-        websiteLink: "https://stephen-parinas-kpop-memory.netlify.app/",
+        websiteLink: "https://stephen-parinas.github.io/kpop-memory-game",
     },
 ];
